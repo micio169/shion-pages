@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="시온「シオン」은 디스코드 서버를 위한 로그, 티켓, 관리 기능을 제공하는 봇입니다.">
+    <meta property="og:title" content="시온「シオン」 Discord Bot">
+    <meta property="og:description" content="로그, 티켓, 관리 기능을 하나로 정리한 디스코드 서버 운영 봇.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="./assets/shion-poster.png">
+    <title>시온「シオン」 Discord Bot</title>
+    <link rel="stylesheet" href="./assets/styles.css">
+    <script defer src="./assets/site.js"></script>
+  </head>
+  <body>
+    <header class="site-header" aria-label="주요 메뉴">
+      <a class="brand" href="./index.html" aria-label="시온 홈">
+        <span class="brand-mark">S</span>
+        <span>시온「シオン」</span>
+      </a>
+      <nav class="nav-links" aria-label="페이지 링크">
+        <a href="#features">기능</a>
+        <a href="#setup">설정</a>
+        <a href="./terms.html">약관</a>
+        <a href="./privacy.html">개인정보</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <img class="hero-image" src="./assets/shion-poster.png" alt="시온 봇의 로그와 티켓 기능을 표현한 디지털 대시보드 이미지">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <p class="eyebrow">Discord server operation bot</p>
+          <h1 id="hero-title">시온「シオン」</h1>
+          <p class="hero-copy">
+            로그 기록, 티켓 문의, 기본 관리 기능을 서버마다 깔끔하게 설정하는
+            디스코드 운영 봇입니다.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" data-invite-link href="#" target="_blank" rel="noreferrer">봇 초대하기</a>
+            <a class="button secondary" href="#setup">설정 보기</a>
+          </div>
+          <dl class="status-strip" aria-label="봇 주요 정보">
+            <div>
+              <dt>Logs</dt>
+              <dd>삭제/수정/입퇴장</dd>
+            </div>
+            <div>
+              <dt>Tickets</dt>
+              <dd>버튼형 문의 채널</dd>
+            </div>
+            <div>
+              <dt>Setup</dt>
+              <dd>서버별 저장</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <section id="features" class="section feature-band" aria-labelledby="features-title">
+        <div class="section-inner">
+          <div class="section-heading">
+            <p class="eyebrow">Core features</p>
+            <h2 id="features-title">서버 운영에 필요한 것만 선명하게</h2>
+          </div>
+          <div class="feature-grid">
+            <article class="feature-card">
+              <span class="feature-icon">LOG</span>
+              <h3>디스코드 로그</h3>
+              <p>메시지 삭제, 메시지 수정, 멤버 입장과 퇴장 기록을 지정한 로그 채널에 남깁니다.</p>
+            </article>
+            <article class="feature-card">
+              <span class="feature-icon">TIX</span>
+              <h3>티켓 문의</h3>
+              <p>버튼 하나로 개인 문의 채널을 만들고, 관리자 역할에게만 확인 권한을 부여합니다.</p>
+            </article>
+            <article class="feature-card">
+              <span class="feature-icon">MOD</span>
+              <h3>관리 명령어</h3>
+              <p>메시지 정리 같은 기본 관리 기능을 슬래시 명령어로 빠르게 실행할 수 있습니다.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="setup" class="section setup-band" aria-labelledby="setup-title">
+        <div class="section-inner split">
+          <div>
+            <p class="eyebrow">Quick setup</p>
+            <h2 id="setup-title">초대 후 서버에서 바로 설정</h2>
+            <p class="body-copy">
+              시온은 한 서버에만 묶이지 않습니다. 각 서버 관리자가 원하는 로그 채널,
+              티켓 카테고리, 관리자 역할을 직접 지정하면 그 서버 설정으로 작동합니다.
+            </p>
+          </div>
+          <div class="command-panel" aria-label="기본 설정 명령어">
+            <div class="command-line">
+              <span>/setup</span>
+              <small>log_channel, ticket_category, staff_role</small>
+            </div>
+            <div class="command-line">
+              <span>/ticket-panel</span>
+              <small>티켓 버튼 전송</small>
+            </div>
+            <div class="command-line">
+              <span>/clear</span>
+              <small>메시지 정리</small>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section trust-band" aria-labelledby="trust-title">
+        <div class="section-inner">
+          <div class="section-heading">
+            <p class="eyebrow">For admins</p>
+            <h2 id="trust-title">서버별 설정, 필요한 데이터만</h2>
+          </div>
+          <div class="trust-list">
+            <p>서버 ID, 로그 채널 ID, 티켓 카테고리 ID, 관리자 역할 ID만 설정 저장에 사용합니다.</p>
+            <p>메시지 로그 기능은 서버 관리자가 지정한 로그 채널 안에서만 기록됩니다.</p>
+            <p>서버에서 봇을 제거하거나 운영자에게 요청하면 저장된 설정 삭제를 요청할 수 있습니다.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>시온「シオン」 Discord Bot</span>
+      <div>
+        <a href="./terms.html">이용 약관</a>
+        <a href="./privacy.html">개인정보 보호 정책</a>
+      </div>
+    </footer>
+  </body>
+</html>
