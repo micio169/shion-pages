@@ -1,2 +1,2 @@
-# shion-pages
-The official website for Discord bot(시온「シオン」)
+# 시온「シオン」WEBSITE
+디스코드 시온「シオン」의 공식적인 웹사이트 입니다.
